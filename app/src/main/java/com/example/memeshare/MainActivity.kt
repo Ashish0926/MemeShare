@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         // Add the request to the RequestQueue.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
-    fun shareMeme() {
+    fun shareMeme(view: View) {
         val intent = Intent(Intent.ACTION_SEND)
         "text/plain".also { intent.type = it }
         intent.putExtra(Intent.EXTRA_TEXT, "Hey! Checkout this hilarious meme, URL: $currentUrl")
@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(chooser)
     }
 
-    fun nextMeme() {
+    fun nextMeme(view: View) {
         loadMeme()
     }
 }
