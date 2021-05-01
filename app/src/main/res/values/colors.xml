@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="shareAccent">#CF4B78</color>
-    <color name="nextAccent">#8BC34A</color>
+    // Colors added by me
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="buttonColor">#FDBE3B</color>
+    <color name="buttonText">#1F1F1F</color>
+    <color name="titleText">#CECECE</color>
+    <color name="backgroundColor">#333333</color>
 </resources>

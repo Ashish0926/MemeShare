@@ -7,9 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
-import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
@@ -71,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         // Add the request to the RequestQueue.
         MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
     }
-    fun shareMeme(view: View) {
+    fun shareMeme() {
         val intent = Intent(Intent.ACTION_SEND)
         "text/plain".also { intent.type = it }
         intent.putExtra(Intent.EXTRA_TEXT, "Hey! Checkout this hilarious meme, URL: $currentUrl")
@@ -79,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(chooser)
     }
 
-    fun nextMeme(view: View) {
+    fun nextMeme() {
         loadMeme()
     }
 }
